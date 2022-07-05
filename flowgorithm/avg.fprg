@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2565-07-05 02:43:57 PM"/>
+        <attribute name="created" value="YWNlcjtERVNLVE9QLUVKTkRSVjM7MjU2NS0wNy0wNTsxMDoyOTo0NSBBTTsyNzgy"/>
+        <attribute name="edited" value="YWNlcjtERVNLVE9QLUVKTkRSVjM7MjU2NS0wNy0wNTswMjo0Mzo1NyBQTTsxOzI5MDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, max" type="Integer" array="False" size=""/>
+            <declare name="score" type="Integer" array="True" size="4"/>
+            <assign variable="score[0]" expression="10"/>
+            <assign variable="score[1]" expression="50"/>
+            <assign variable="score[2]" expression="40"/>
+            <assign variable="score[3]" expression="20"/>
+            <assign variable="n" expression="4"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="max" expression="score[0]"/>
+            <while expression="n &gt; 0">
+                <if expression="max &lt; score[i]">
+                    <then>
+                        <assign variable="max" expression="score[i]"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+                <assign variable="n" expression="n - 1"/>
+            </while>
+            <output expression="max" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
