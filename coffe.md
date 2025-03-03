@@ -20,3 +20,29 @@
 - แนะนำทุนการศึกษาที่เหมาะสมกับผลการเรียนและสาขาที่สนใจ
 - มีลิงก์สมัครทุนและเงื่อนไขที่ต้องปฏิบัติตาม
 สร้างแอปนี้ใน PartyRock.AWS โดยใช้ AI เพื่อช่วยนักเรียนมัธยมปลายเลือกเส้นทางการศึกษาต่อได้อย่างเหมาะสม"
+# ตัว ref
+Anderson, L. W., & Krathwohl, D. R. (2001). A Taxonomy for Learning, Teaching and Assessing: A Revision of Bloom’s Taxonomy of Educational Objectives: Complete Edition. New York: Longman.
+Bloom, B.S. (1956) Taxonomy of Educational Objectives, Handbook: The Cognitive Domain. David McKay, New York.
+Brooks, J. G., & Brooks, M. G. (1993). In Search of Understanding: The Case for Constructivist Classrooms. Alexandria, VA: Association for Supervision and Curriculum Development.
+# code
+```python
+import pandas as pd
+
+# สมมติว่ามี DataFrame ชื่อ df และคอลัมน์ QTY อยู่ในรูปแบบ object
+# ขั้นแรก: ตรวจสอบข้อมูลเบื้องต้น
+print(df['QTY'].unique())
+
+# ขั้นที่สอง: ทำความสะอาดข้อมูล เช่น ลบหรือแทนที่ค่าที่ไม่ใช่ตัวเลข
+# ลบช่องว่างหรือสัญลักษณ์พิเศษ ถ้ามี
+df['QTY'] = df['QTY'].str.replace(',', '')  # ลบเครื่องหมายจุลภาค (ถ้ามี)
+df['QTY'] = df['QTY'].str.strip()           # ลบช่องว่างที่ขึ้นต้นและท้าย
+
+# ขั้นที่สาม: แปลงคอลัมน์ QTY เป็นตัวเลข และจัดการค่าที่ไม่สามารถแปลงได้
+df['QTY'] = pd.to_numeric(df['QTY'], errors='coerce')
+
+# ขั้นที่สี่: แปลงคอลัมน์ QTY เป็น int โดยลบค่าที่เป็น NaN ออกไป
+df['QTY'] = df['QTY'].fillna(0).astype(int)
+
+# ตรวจสอบผลลัพธ์หลังจากการแปลง
+print(df[['QTY']].head())
+```
