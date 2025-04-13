@@ -8,3 +8,4 @@
 * REST ย่อมาจาก Representational State Transfer (การโอนสถานะแบบตัวแทน) REST ช่วยกำหนดชุดฟังก์ชันต่างๆ เช่น GET, PUT, DELETE ฯลฯ ที่ไคลเอ็นต์สามารถใช้เพื่อเข้าถึงข้อมูลเซิร์ฟเวอร์ได้ ไคลเอ็นต์และเซิร์ฟเวอร์แลกเปลี่ยนข้อมูลโดยใช้ HTTP
 
  Progressive Web Apps
+https://about.gitea.com/
