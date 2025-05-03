@@ -9,3 +9,17 @@
 
  Progressive Web Apps
 https://about.gitea.com/
+เชื่อมต่อแบบไร้สายผ่าน Screen Share (Miracast) (เฉพาะ Windows และทีวี LG ที่รองรับ)
+วิธีเชื่อมต่อ:
+
+    บนทีวี LG:
+
+        เปิดแอป Screen Share จากเมนู
+
+    บน Windows:
+
+        กด Win + K → เลือกชื่อทีวี LG ของคุณ
+
+        รอให้เชื่อมต่อสำเร็จ
+
+    📌 ต้องเชื่อม Wi-Fi วงเดียวกันทั้งทีวีและแล็ปท็อป
